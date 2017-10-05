@@ -6,7 +6,7 @@
 console.dir(Promise);
 ```
 
-![console.dir(promise)](http://202.118.16.50:8033\images\console.dir(promise).png)
+![console.dir(promise)](D:\individual\参考手册\Javascript\book\note\console.dir(promise).png)
 
 一看就知道， Promise是一个构造函数， 自己身上有all、reject、resolve这几个眼熟的方法， 原型上有then、catch等同样眼熟的方法。这么说用Promise new 出来的对象肯定有 then、catch 方法。
 
@@ -110,7 +110,7 @@ runAsync1()
 
 酱紫的话就可以按照顺序， 每隔两秒输出异步回调中的内容， 在runAsync2中传给resolve的数据， 能在接下来的then方法中拿到。 运行结果如下：
 
-![执行结果动图](http://202.118.16.50:8033\images\执行结果动图.gif)
+![执行结果动图](D:\individual\参考手册\Javascript\book\note\执行结果动图.gif)
 
 猜猜 runAsync1、runAsync2、runAsync3这三个函数都是如何定义的？ 没错就是下面酱紫：
 
@@ -166,7 +166,7 @@ function runAsync1() {                                          // 做一些异�
 
 那么输出结果就变成了酱紫：
 
-![直接 返回数据](http://202.118.16.50:8033\images\直接 返回数据.gif)
+![直接 返回数据](D:\individual\参考手册\Javascript\book\note\直接 返回数据.gif)
 
 ### 2.3 reject 的用法
 
@@ -204,7 +204,7 @@ function runAsync1() {                                          // 做一些异�
 
 getNumber函数用来异步获取一个数字， 2秒之后执行完成， 如果数字小于5， 我们认为“成功”了， **调用resolve修改Promise的状态**。 否则， 我们认为是“失败”了， 调用reject并传递一个参数， 作出失败的原因。
 
-运行getNumber并且在then中传了两个参数， then方法可以接受两个参数， **第一个对应resolve的回调， 第二个对应reject的回调**。 所以我们能够分别拿到他们传递过来的数据。 多次运行这段代码， 会随机得到两种结果：![resolve&rejecte](http://202.118.16.50:8033\images\resolve&rejecte.png)
+运行getNumber并且在then中传了两个参数， then方法可以接受两个参数， **第一个对应resolve的回调， 第二个对应reject的回调**。 所以我们能够分别拿到他们传递过来的数据。 多次运行这段代码， 会随机得到两种结果：![resolve&rejecte](D:\individual\参考手册\Javascript\book\note\resolve&rejecte.png)
 
 ### 2.4 catch的用法
 
@@ -284,7 +284,7 @@ Promise 的all方法提供了并且执行异步操作的能力， 并且在所�
 
 用Promise.all 来执行， all接收一个数组参数， 里面的值最终都算返回Promise对象。 酱紫， 三个异步操作是并行执行的， 等到他们都执行完后才进到then里面。 那么， 三个异步操作的数据哪里去了呢？ 都在then里面呢， all会把所有异步操作的结果放进一个数组中传给then， 就是上面的results。 所以上面的代码输出结果为：
 
-![ll](http://202.118.16.50:8033\images\all.gif)
+![ll](D:\individual\参考手册\Javascript\book\note\all.gif)
 
 有了all， 你就可以执行多个异步操作， 并且在一个回调中处理所有的返回数据， 是不是很爽， **有一个场景是很适合用这个的， 一些游戏类的素材比较多的应用， 打开网页是， 预先加载需要用到的各种资源图片、 flash以及各种静态文件。 所有的都加载完成后， 我们再进行页面的初始化。**
 
@@ -334,7 +334,7 @@ all方法的效果实际上是[**谁跑的慢，以谁为准执行回调** ]， 
 
 这三个的操作同样是并行执行的， 结果应该可以猜得到， 1秒之后runAsync执行完毕了， 是的then里面的就是执行了， 结果是酱紫的：
 
-![race](http://202.118.16.50:8033\images\race.gif)
+![race](D:\individual\参考手册\Javascript\book\note\race.gif)
 
 在then里面的回调开始执行时， **runAsync2() 和runAsync3()并没有停止， 仍旧在执行。 于是再过1秒后， 输出了他们结束的标志。**
 
@@ -379,9 +379,9 @@ requsetImg 函数会异步请求一张图片， 我们把地址写为 “xxx”�
 
 图片请求失败：
 
-![race使用](http://202.118.16.50:8033\images\race使用.png)
+![race使用](D:\individual\参考手册\Javascript\book\note\race使用.png)
 
 图片请求成功：
 
-![race成功请求](http://202.118.16.50:8033\images\race成功请求.png)
+![race成功请求](D:\individual\参考手册\Javascript\book\note\race成功请求.png)
 
