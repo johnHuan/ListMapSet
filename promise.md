@@ -64,7 +64,7 @@ function runAsync(){
 
 ```
 
-在 runAsync() 的返回上直接调用then 方法， then接收一个参数， 是函数， 并且会拿到runAsync中调用resolve时传递的参数， 运行这段代码 ， 之后2秒会输出“执行完成”, 紧接着输出“随便什么.
+在 runAsync() 的返回上直接调用then 方法， then接收一个参数， 是函数， 并且会拿到runAsync中调用resolve时传递的参数， 运行这段代码 ， 之后2秒会输出“执行完成”, 紧接着输出“随便什么数据！“.
 
 ## 2. 关健方法解析
 
