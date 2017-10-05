@@ -8,8 +8,6 @@ console.dir(Promise);
 
 ![console.dir(promise)](http://202.118.16.50:8033\images\console.dir(promise).png)
 
-![console.dir(promise)](D:\individual\参考手册\Javascript\book\note\console.dir(promise).png)
-
 一看就知道， Promise是一个构造函数， 自己身上有all、reject、resolve这几个眼熟的方法， 原型上有then、catch等同样眼熟的方法。这么说用Promise new 出来的对象肯定有 then、catch 方法。
 
 ```javascript
